@@ -1,0 +1,39 @@
+@charset "utf-8";
+body {
+    background: #4bcffa;
+}
+::selection {
+    color: pink;
+}
+
+.wrapper {
+    margin: auto;
+    width: 65%;   
+}
+.grid {
+    border: 1px solid black;
+    height: 400px;
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.grid-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.grid-item:nth-child(odd) {
+    background: #34e7e4;
+}
+.grid-item a {
+    text-decoration: none;
+    color: darkslategrey;
+    font-size: 20px;
+    transition: all, .5s;
+}
+.grid-item a:hover {
+    font-size: 22px;
+    text-decoration: underline;
+    color: black;
+}

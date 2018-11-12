@@ -1,0 +1,50 @@
+body {
+    background: red;
+}
+
+.wrapper {
+    width: 90%;
+    max-height: 960px;
+    min-height: 600px;
+    background: white;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header {
+    display: flex;
+    background: blue;
+    height: 220px;
+    /*    pga flex:    */
+    justify-content: space-between;
+    align-items: flex-start;
+    
+}
+
+.logo {
+    background: green;
+    width: 40%;
+    
+}
+
+nav.meny {
+    background: pink;
+    width: 55%;
+    
+}
+
+/* Meny */
+
+nav {}
+
+nav ul {
+    list-style-type: none;
+    padding: 0px;
+    
+}
+
+nav li {}
+
+nav a {}
+
+nav a:hover {}

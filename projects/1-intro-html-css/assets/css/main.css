@@ -1,0 +1,127 @@
+@charset "utf-8";
+/* skriv kommentar här */
+body {
+    background-color: rgb(139, 0, 0);
+}
+h1 {
+    background-color: #832222;
+    color: #ffffff;
+    text-shadow: 2px 1px 5px #000000; /* x y blur color */
+    text-align: center;
+    line-height: 100px;
+    letter-spacing: 5px;
+    font-weight: 200;
+    text-decoration: none;
+}
+h6 {
+    color:green;
+    background-color: aliceblue;
+}
+p {
+    background-color: red;
+    color: white;
+    font-style: italic;
+    
+}
+ul {
+    border: 1px solid #000000; /* width appearance color */
+    padding-left: 0px;
+    list-style-type: none
+}
+ul li {
+    color: aqua;
+    font-weight: 200;
+} 
+/* ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 32px;
+    background-color: blue;
+    display: block;
+}
+*/
+.wrapper {
+    background-color: #2c3e50;
+    height: auto;
+    min-height: 400px;
+    width: 80%;
+    margin: auto; /* top right bottom left - tänk klockan 12, 3, 6, 9 */
+    padding: 5px;
+}
+
+header {
+    height: 100px;
+    background-color: #e67e22;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-flow: row;
+}
+
+header img {
+    width: 100px;
+    height: 100px;
+    
+}
+
+main {
+    background-color: #f78f33;
+    height: 300px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-flow: row wrap;
+}
+
+.box {
+    width: 50px;
+    height: 50px;
+    background-color: orange;
+    
+}
+
+.box1{
+    background-color: green;
+}
+
+.box2{
+    background-color: greenyellow;
+}
+
+
+.box3{
+    background-color: yellowgreen;
+}
+
+.box4{
+    background-color: yellow;
+}
+
+.box5{
+    background-color: darkgoldenrod;
+}
+
+.box6{
+    background-color: orangered;
+}
+
+.box7{
+    background-color: palevioletred;
+}
+
+.box8{
+    background-color: mediumvioletred;
+}
+
+.box9{
+    background-color: indianred;
+}
+
+.box10{
+    background-color: red;
+}
+
+/*
+    DRY - Don't repeat Yourself +1
+    WET - Write Everything Twice -1
+*/
