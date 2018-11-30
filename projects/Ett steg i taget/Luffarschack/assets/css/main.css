@@ -1,4 +1,40 @@
 body {
-    background: red;
+    background: white;
+}
+.grid {
+    height: 600px;
+    width: 600px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+        ". a ."
+        "d . b"
+        ". c .";
     
+}
+.box {
+    border: 1px solid black;
+
+}
+.item1 {
+    grid-area: a;
+    border-top: none;
+    margin-bottom: -1.6px;
+}
+.item2 {
+    grid-area: b;
+    border-right: none;
+    margin-left: -1.2px;
+}
+.item3 {
+    grid-area: c;
+    border-bottom: none;
+    margin-top: -1.6px;
+}
+.item4 {
+    grid-area: d;
+    border-left: none;
+    margin-right: -1.4px;
 }

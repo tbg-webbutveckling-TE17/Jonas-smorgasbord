@@ -1,0 +1,33 @@
+@charset "utf-8";
+body {
+    background: red;
+}
+h1 {
+    text-align: center;
+    text-decoration: underline;
+    font-size: 20px;
+}
+.wrapper {
+    margin: auto;
+    width: 65%;   
+}
+.grid {    
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.grid-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.imgs img:hover {
+    transform: scale(1.15);
+    
+}
+.imgs img{
+    height: 100%;
+    width: 100%;
+    border: 1px solid black;
+    transition: all 0.6s;
+}
