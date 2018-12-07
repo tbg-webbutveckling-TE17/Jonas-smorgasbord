@@ -23,6 +23,7 @@ h1 {
 }
 .imgs img:hover {
     transform: scale(1.15);
+    border: 1.5px solid blue;
     
 }
 .imgs img{
