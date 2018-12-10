@@ -3,20 +3,18 @@ body {
     background: #ecf0f1;
     display: flex;
     justify-content: center;
-    max-width: 960px;
 }
 mark {
     background-color: #bdc3c7;
 }
 .blogpost {
     border: 6px solid #7f8c8d;
-    padding: 7px;
+    padding: 10px;
 }
 .quote {
     border-left: 2.5px solid black;
+    padding-left: 2px;
 }
 hr {
     color: #95a5a6;
-}
-article {
 }
