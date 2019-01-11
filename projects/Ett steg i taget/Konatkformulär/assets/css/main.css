@@ -1,0 +1,58 @@
+body {
+    background: yellow;
+}
+.gridparent {
+    display: grid;
+    grid-template-columns: 250px 25px 250px;
+    grid-template-rows: 40px 15px 100px 10px 35px;
+    grid-template-areas: 
+        "a . b"
+        ". . ."
+        "c c c"
+        ". . ."
+        "d d d";    
+}
+.input1 {
+    grid-area: a;
+}
+.input2 {
+    grid-area: b;
+}
+.textarea {
+    grid-area: c;
+    opacity: .7;
+}
+button {
+    grid-area: d;
+}
+.wrapper {
+    height: 90vh;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center
+}
+h3,h4 {
+    margin: 5px;
+}
+
+.tel {
+    padding-bottom: 80px;
+}
+.formtext{
+    margin-bottom: 18px;
+}
+h1 {
+    font-size: 2em;
+}
+.roboto {
+    font-family: "Arial";
+}
+textarea, input, button {
+    border-radius: 2px;
+}
+button {
+    background: transparent;
+    border: 3px solid red;
+}

@@ -18,3 +18,129 @@ mark {
 hr {
     color: #95a5a6;
 }
+<ul id="nav">
+          <li>
+           <a href="#">Start</a>
+           <a href="#">Om Oss</a>
+           <a href="#">Produkter</a>
+           <a href="#">Vision</a>
+           <a href="#">Kontakta Oss</a>
+           </li>
+       </ul>
+
+<!DOCTYPE html>
+<html lang="sv-se">
+   <head>
+       <meta charset="utf-8">
+       <title>Drop Down</title>
+       <link rel="stylesheet" href="assets/css/main.css">
+   </head>
+   <body>
+     <nav>
+        <a href="#">Start</a> |
+        <a href="#">Om Oss</a> |
+        <a href="#">Produkter</a>| 
+        <ul> 
+          <li><a href="#">NätAggregat</a></li>
+          <li><a href="#">Moderkort</a></li>
+           <li><a href="#">Proccesorer</a>
+           <ul><li><a href="#">x3</a></li>
+           <li><a href="#">x5</a></li>
+           <li><a href="#">x7</a></li>
+           <li><a href="#">x9</a></li>
+           </ul>
+           </li>
+        </ul>
+        <a href="#">Events</a> |
+        <a href="#">Membership</a>     
+    </nav>
+   </body>
+</html>
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #808e9b;
+}
+ /* mitt */
+nav ul {
+  list-style: none;
+  background-color: #444;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  font-size: 1.2em;
+  line-height: 40px;
+  text-align: left;
+}
+
+nav a {
+  text-decoration: underline;
+  color: yellow;
+  display: block;
+  padding-left: 15px;
+  border-bottom: 1px solid #888;
+  transition: .3s background-color;
+}
+
+nav a:hover {
+  background-color: #ffa801;
+    
+}
+
+nav a.active {
+  color: #444;
+}
+
+/* Sub Menus */
+nav li li {
+    font-size: .9em;
+}
+
+  nav li {
+    width: 130px;
+    border-bottom: none;
+    height: 50px;
+    line-height: 50px;
+    font-size: 1.4em;
+    display: inline-block;
+    margin-right: -4px;
+  }
+
+  nav a {
+      border-bottom: none;
+  }
+
+  /* alternativ */
+  nav li ul {
+      position: absolute;
+      display: none;
+      width: inherit;
+  }
+  /* neråt */
+nav li:hover ul {
+      display: block;
+}
+
+
+<ul>
+        <li class="home"><a href="#">Home</a></li>
+        <li class="tutorials"><a href="#">Tutorials</a>
+          <ul>
+            <li><a href="#">Tutorial #1@@</a></li>
+            <li><a href="#">Tutorial #2</a></li>
+            <li><a href="#">Tutorial #3</a></li>
+          </ul>
+        </li>
+        <li class="about"><a class="active" href="#">About</a></li>
+        <li class="news"><a href="#">Newsletter</a>
+          <ul>
+            <li><a href="#">News #1</a></li>
+            <li><a href="#">News #2@@@</a></li>
+            <li><a href="#">News #3</a></li>
+          </ul>
+        </li>
+        <li class="contact"><a href="#">Contact</a></li>
