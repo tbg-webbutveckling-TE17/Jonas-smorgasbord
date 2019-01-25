@@ -11,9 +11,8 @@ body {
     width: 65%;   
 }
 .grid {
-    border: 1px solid black;
+    border: 2px solid black;
     height: 400px;
-    
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 }
