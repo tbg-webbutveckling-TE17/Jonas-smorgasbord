@@ -1,38 +1,60 @@
 @charset "utf-8";
 body {
-    background: #4bcffa;
-}
-::selection {
-    color: pink;
-}
-
-.wrapper {
-    margin: auto;
-    width: 65%;   
-}
-.grid {
-    border: 2px solid black;
-    height: 400px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-}
-.grid-item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin: 0;
+    background: #908e9b;
     
 }
-.grid-item:nth-child(odd) {
-    background: #34e7e4;
+.pro {
+    border-bottom: 1px solid black;
 }
-.grid-item a {
+.head {
+        background: linear-gradient(to bottom, hsla(0,0%,0%,1) 0%,hsla(0,0%,27%,1) 50%,hsla(0,0%,0%,1) 100%);
+}
+ul {
+    background-color: #444;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    
+}
+a {
+    font-size: 1.33em;
+    line-height: 45px;
+    color: yellow;
     text-decoration: none;
-    color: darkslategrey;
-    font-size: 20px;
-    transition: all, .5s;
+    display: block;
 }
-.grid-item a:hover {
-    font-size: 22px;
+.pro:hover {
+    background: linear-gradient(to bottom, hsla(0,0%,27%,1) 0%,hsla(0,0%,0%,1) 50%,hsla(0,0%,27%,1) 100%);
+}
+.sub a:hover {
     text-decoration: underline;
-    color: black;
+    background-color: #333333;
+}
+nav li li {
+    font-size: 0.6em;
+}
+li {
+    width: 300px;
+    border-bottom: none;
+    font-size: 1.33em;
+    display: inline-block;
+}
+nav li ul {
+    position: absolute;
+    display: none;
+    width: inherit;
+}
+li:hover .projects{
+    display: block;
+}
+.pro:hover .ett-steg-i-taget {
+    display: block;
+}
+
+.pro:hover .webbkoda {
+    display: block;
+}
+.pro:hover .layouts {
+    display: block;
 }
