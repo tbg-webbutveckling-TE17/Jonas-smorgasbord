@@ -1,0 +1,95 @@
+@charset "utf-8";
+.big-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "l . ad ad"
+        "n n n n"
+        "s s s s"
+        "f f f f";
+    text-align: center;
+}
+.grid-item, .s-grid-item {
+    background-color: gray;
+}
+.log{
+    grid-area: l;
+}
+.ad {
+    grid-area: ad;
+}
+nav, li{
+    grid-area: n;
+    height: 40px;
+    list-style: none;
+    padding-left: 0;
+}
+footer {
+    grid-area: f;
+}
+.small-grid, .big-grid, .abc{
+    grid-column-gap: 10px;
+    grid-row-gap: 5px;
+}
+.small-grid {
+    height: 500px;
+    grid-area: s;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+        "a a b c";
+}
+.a {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+        "a1 a1"
+        "a2 a2"
+        "a3 a3"
+        "a3 a3";
+    grid-area: a;
+}
+.b {
+    grid-area:     b;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+        "b1"
+        "b2"
+        "b2";
+}
+.c {
+    grid-area: c;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+        "c1"
+        "c2"
+        "c2"
+        "c3";
+}
+.a1{
+    grid-area: a1;
+}
+.a2{
+    grid-area: a2;
+}
+.a3{
+    grid-area: a3;
+}
+.b1{
+    grid-area: b1;
+}
+.b2{
+    grid-area: b2;
+}
+.c1{
+    grid-area: c1;
+}
+.c2{
+    grid-area: c2;
+}
+.c3{
+    grid-area: c3;
+}
