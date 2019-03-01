@@ -46,10 +46,26 @@ img, figcaption p, h3 {
     margin-left: -10px;
     margin-right: -10px;
 }
-ul {
+ul, li {
     list-style-type: none;
 }
-footer {
+footer{
     display: flex;
-    justify-content: space-between
+}
+.foot {
+    display: flex;
+    justify-content: space-between;
+    width: 79%;
+    margin: auto;
+}
+.foots {
+    width: 20.29%;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+}
+.sist {
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
 }
