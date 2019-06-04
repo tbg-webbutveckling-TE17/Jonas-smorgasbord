@@ -1,9 +1,8 @@
 @charset "utf-8";
 header {
     display: flex;
-    margin-left: 1.3%;
-    background-image: url(../bilder/Untitled2.jpg);
-    height: 444px;
+    background-image: url(../bilder/defqon.jpg);
+    height: 380px;
     background-size: contain;
     width: 100%;
     background-repeat: no-repeat;
@@ -17,7 +16,7 @@ body {
 
 nav {
     height: 100%;
-    width: 14%;
+    width: 15%;
     position: fixed;
     z-index: 0;
     top: 0;
@@ -26,11 +25,12 @@ nav {
     overflow-x: hidden;
     
 }
-.main .left {
-    display: flex;
+.main {
+    
 }
 .main .mid {
     margin-left: 13%;
+    display: flex;
 }
 nav a, .logo {
     display: flex;
@@ -47,38 +47,29 @@ a:hover {
 .news {
     display: flex;
     flex-direction: column;
-    margin: 1%
+    margin: 1%;
+    
 }
 figure {
-    padding-top: 1%;
     padding-left: 2%;
     position: relative;
+    background-image: url(https://via.placeholder.com/700x140);
+    height: 140px;
+    background-size: contain;
+    width: 60%;
+    background-repeat: no-repeat;
 }
 figcaption {
-    margin-top: -12%;
-    margin-left: 2.2%;
+    display: flex;
     position: absolute;
-    height: 100%;
-    width: 100%;
+    width: 100%
 }
-iframe {
-    min-width: 50%;
-    max-height: 100%;
     
-}
-/*.video {*/
-/*    display: flex;*/
-/*    justify-content: center;*/
-/*    height: 360px;*/
-/*}*/
-/*.wallpaper {
-    background-image: url("https://travel.defqon1.com/images/eventmedia/42/img/defqon.1-banner-travel.png");
-    max-width: 100%;*/
-    
-    
+
 }
 .main {
     display: flex;
+    width: 100%;
 }
 .button {
     background-color: indianred;
@@ -88,11 +79,12 @@ iframe {
     justify-content: center;
     align-items: center;
     position: absolute;
+    margin-top: 3%;
 }
 .button:hover {
     border: 1px solid black;
     
 }
 figcaption p {
-    margin-top: 7%;
+    margin-top: 13%;
 }
