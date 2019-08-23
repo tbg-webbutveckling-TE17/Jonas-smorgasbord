@@ -32,12 +32,12 @@ a {
     background-color: #333333;
 }
 nav li li {
-    font-size: 0.6em;
+    font-size: 0.7em;
 }
 li {
-    width: 300px;
+    width: 200px;
     border-bottom: none;
-    font-size: 1.33em;
+    font-size: 1em;
     display: inline-block;
 }
 nav li ul {
