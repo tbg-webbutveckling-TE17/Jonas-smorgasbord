@@ -1,5 +1,8 @@
 body {
-    background-color: #d2dae2;
+    background-image: url(https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/Ec7hwrKKxik52rser/4k-technology-abstract-animation-background-seamless-loop-blue-color_vxpy6lnfx__F0000.png);
+}
+header {
+    color: white;
 }
 .wrapper {
     width: 80%;
@@ -36,5 +39,42 @@ nav ul li a {
 }
 nav ul li a:hover {
     background: rgba(0, 0, 0, .6);
-    transition: .3s;
+    transition: .2s;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: minmax(300px, auto) 25px;
+    grid-template-areas: 
+        "left mid right"
+        "bottom bottom bottom";
+}
+
+.left {
+    background: #3498db;
+    grid-area: left;
+}
+.mid {
+    background: #2ecc71;
+    grid-area: mid;
+}
+
+.right {
+    background: #e67e22;
+    grid-area: right;
+}
+.bottom {
+    background: #f1c40f;
+    grid-area: bottom;
+}
+footer {
+    height: 175px;
+    background: #2c3e50;
+}
+footer p {
+    margin: 0;
+}
+footer p:nth-child(odd) {
+    background-color: whitesmoke;
 }
