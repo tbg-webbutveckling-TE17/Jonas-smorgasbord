@@ -87,9 +87,15 @@ for (var i = 0; i < choices.length; i++) {
     document.writeln('<br/>');
 
 */
-for (var i = 10; i > 1 ; i--) {
-    document.writeln('hej');
-    for(var = b; 10 < b; b--) {
-        document.writeln('* ');
+for (var i = 10; i >= 0 ; i--) {
+    for(var ii = 0; ii <= i; ii++) {
+        document.writeln("* ");
+    }
+    document.writeln('<br/>');
+}
+for (var i = 10; i >= 0 ; i--) {
+    for(var ii = 0; ii >= i; ii--) {
+        document.writeln("* ");
+    }
     document.writeln('<br/>');
 }
