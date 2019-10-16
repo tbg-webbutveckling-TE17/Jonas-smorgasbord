@@ -93,9 +93,21 @@ for (var i = 10; i >= 0 ; i--) {
     }
     document.writeln('<br/>');
 }
-for (var i = 10; i >= 0 ; i--) {
-    for(var ii = 0; ii >= i; ii--) {
-        document.writeln("* ");
+/*
+for (var i = 0; i <= 10 ; i++) {
+    var space = [" ", " ", " ", " ", " ", " ", " ", " ", ]
+    for(var ii = 10; ii >= i; ii--) {
+        document.writeln(space.slice(ii) + " *");
+    }
+    document.writeln('<br/>');
+}
+*/
+for (var i = 0; i <= 100 ; i++) {
+    for(var iii = 100; iii >= i; iii--) {
+        document.writeln("\xa0");
+    }
+    for(var ii = 0; ii <= i; ii++) {
+        document.writeln("\xa0*\xa0");
     }
     document.writeln('<br/>');
 }
