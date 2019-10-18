@@ -1,6 +1,7 @@
+/*
 var choices = ["Nudlar", "Pankaka", "Palt","Tacos", "Köttbullar", "Pizza"];
 
-/*  for (var i = 0; i < choices.length; i++) {
+  for (var i = 0; i < choices.length; i++) {
     document.writeln('My nr ' + (i + 1) + '     favorite food is ' + choices[i]);
     document.writeln('<br/>');
 }
@@ -19,14 +20,13 @@ for (var i = 0; i < choices.length; i++) {
     document.writeln('My '+ (i + 1) + ordinal + ' favorite food is ' + choices[i]);
     document.writeln('<br/>');
 
-*/
+
 for (var i = 10; i >= 0 ; i--) {
     for(var ii = 0; ii <= i; ii++) {
         document.writeln("* ");
     }
     document.writeln('<br/>');
 }
-/*
 for (var i = 0; i <= 10 ; i++) {
     var space = [" ", " ", " ", " ", " ", " ", " ", " ", ]
     for(var ii = 10; ii >= i; ii--) {
@@ -34,7 +34,7 @@ for (var i = 0; i <= 10 ; i++) {
     }
     document.writeln('<br/>');
 }
-*/
+
 for (var i = 0; i <= 100 ; i++) {
     for(var iii = 100; iii >= i; iii--) {
         document.writeln("\xa0");
@@ -44,3 +44,4 @@ for (var i = 0; i <= 100 ; i++) {
     }
     document.writeln('<br/>');
 }
+*/
