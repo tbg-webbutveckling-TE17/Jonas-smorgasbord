@@ -1,5 +1,5 @@
 
-function twinkleTwinkle() {
+/*function twinkleTwinkle() {
     console.log("Blinka lilla stjärna där!");
     console.log("hur jag undrar var du är..");
 }
@@ -48,4 +48,69 @@ function isEven(x) {
         return false
     }
 }
-console.log(isEven(2));
+console.log
+(isEven(2));
+*/
+function sing() {
+    console.log('hej');
+}
+setInterval(sing, 2000);
+clearInterval(1);
+setInterval(sing, 2000);    
+clearInterval(2);
+
+var IntervalExample = setInterval(sing, 2000);
+clearInterval(IntervalExample);
+
+var anon = setInterval(function() {
+    console.log('Im an anonomous function');
+}, 1500);
+
+clearInterval(anon);
+
+function myTimer() {
+    var d = new Date();
+    var time = d.toLocaleTimeString();
+    document.getElementById('timeOutput').innerHTML = time;
+}
+
+myTimer();
+
+var myTime= setInterval(myTimer, 1000);
+
+var stopBtn = document.getElementsByTagName('button')[0];
+stopBtn.addEventListener('mouseenter', function() {
+    clearInterval(myTime);
+});
+
+stopBtn.addEventListener('mouseleave', function() {
+    myTime = setInterval(myTimer, 1000);
+    
+});
+
+// Calculate tip
+/*
+function calculateTip(total) {
+    var tipPercent = 0.15;
+    return total * tipPercent;
+}
+
+var billTotal = prompt("Quanto Costa?");
+var billTip = calculateTip(billTotal);
+var receipt = "Bill total: " + billTotal + " Tip: " + billTip;
+console.log(receipt);
+*/
+function tellFortune(nrChildren, partnerFirst, partnerSurr, location, job) {
+    document.getElementById('fortune').innerHTML = "You will be a " + job + " in " + location + " and married to " + partnerFirst +" "+ partnerSurr + " with " + nrChildren + " kids.";
+};
+
+var partnersFirst = ["Amanda", "Susan", "Maria", "Anna"];
+var partnersSurr = ["Jonsson", "Gustavsson", "Bäckman", "Andersson"];
+var locations = ["Lycksele", "L.A.", "Kroksjö", "Kiev"];
+var jobs = ["Engineer", "Cleaner", "Teacher", "Electrician"];
+
+
+var fortuneBtn = document.getElementsByTagName('button')[1];
+fortuneBtn.addEventListener('mousedown', function() {
+    tellFortune(Math.floor(Math.random() * 4), partnersFirst[Math.floor(Math.random() * 4)], partnersSurr[Math.floor(Math.random() * 4)],locations[Math.floor(Math.random() * 4)], jobs[Math.floor(Math.random() * 4)]);
+});
