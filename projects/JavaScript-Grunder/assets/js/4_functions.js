@@ -101,7 +101,7 @@ var receipt = "Bill total: " + billTotal + " Tip: " + billTip;
 console.log(receipt);
 */
 function tellFortune(nrChildren, partnerFirst, partnerSurr, location, job) {
-    document.getElementById('fortune').innerHTML = "You will be a " + job + " in " + location + " and married to " + partnerFirst +" "+ partnerSurr + " with " + nrChildren + " kids.";
+    document.getElementById('fortune').innerHTML += "You will be a " + job + " in " + location + " and married to " + partnerFirst +" "+ partnerSurr + " with " + nrChildren + " kids. <br/>";
 };
 
 var partnersFirst = ["Amanda", "Susan", "Maria", "Anna"];
@@ -109,8 +109,36 @@ var partnersSurr = ["Jonsson", "Gustavsson", "Bäckman", "Andersson"];
 var locations = ["Lycksele", "L.A.", "Kroksjö", "Kiev"];
 var jobs = ["Engineer", "Cleaner", "Teacher", "Electrician"];
 
-
+var colors = ["blue", "grey", "",]
 var fortuneBtn = document.getElementsByTagName('button')[1];
 fortuneBtn.addEventListener('mousedown', function() {
-    tellFortune(Math.floor(Math.random() * 4), partnersFirst[Math.floor(Math.random() * 4)], partnersSurr[Math.floor(Math.random() * 4)],locations[Math.floor(Math.random() * 4)], jobs[Math.floor(Math.random() * 4)]);
+    document.getElementById("fortune").style.color = "magenta";
+    tellFortune(Math.floor(Math.random() * 4), partnersFirst[Math.floor(Math.random() * partnersFirst.length)], partnersSurr[Math.floor(Math.random() * partnersSurr.length)],locations[Math.floor(Math.random() * locations.length)], jobs[Math.floor(Math.random() * jobs.length)]);
 });
+/*
+function tellFortune(nrChildren, partnerFirst, partnerSurr, location, job) {
+    document.getElementsByTagName('p')[newPara].innerHTML += "You will be a " + job + " in " + location + " and married to " + partnerFirst +" "+ partnerSurr + " with " + nrChildren + " kids.";
+    
+};
+function newParagraph(){
+    newPara += 1;
+    var paraCreate = document.createElement("p");
+    var paraText = document.createTextNode(tellFortune(Math.floor(Math.random() * 4), partnersFirst[Math.floor(Math.random() * partnersFirst.length)], partnersSurr[Math.floor(Math.random() * partnersSurr.length)],locations[Math.floor(Math.random() * locations.length)], jobs[Math.floor(Math.random() * jobs.length)]));
+    paraCreate.appendChild(paraText)
+    var para = document.getElementsByClassName("fortunePara");
+    para.appendChild(paraCreate)
+    document.getElementsByTagName('p')[newPara].style.color = colors[Math.floor(Math.random() * 5)];
+
+}
+var partnersFirst = ["Amanda", "Susan", "Maria", "Anna"];
+var partnersSurr = ["Jonsson", "Gustavsson", "Bäckman", "Andersson"];
+var locations = ["Lycksele", "L.A.", "Kroksjö", "Kiev"];
+var jobs = ["Engineer", "Cleaner", "Teacher", "Electrician"];
+var colors = ["blue", "grey", "yellow", "azure", "black"]
+var newPara = 0;
+var fortuneBtn = document.getElementsByTagName('button')[1];
+fortuneBtn.addEventListener('mousedown', function() {
+    newParagraph();
+    tellFortune(Math.floor(Math.random() * 4), partnersFirst[Math.floor(Math.random() * partnersFirst.length)], partnersSurr[Math.floor(Math.random() * partnersSurr.length)],locations[Math.floor(Math.random() * locations.length)], jobs[Math.floor(Math.random() * jobs.length)]);
+});
+*/
