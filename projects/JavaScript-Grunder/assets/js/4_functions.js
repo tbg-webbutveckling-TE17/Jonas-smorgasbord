@@ -100,21 +100,32 @@ var billTip = calculateTip(billTotal);
 var receipt = "Bill total: " + billTotal + " Tip: " + billTip;
 console.log(receipt);
 */
+/*
 function tellFortune(nrChildren, partnerFirst, partnerSurr, location, job) {
-    document.getElementById('fortune').innerHTML += "You will be a " + job + " in " + location + " and married to " + partnerFirst +" "+ partnerSurr + " with " + nrChildren + " kids. <br/>";
-};
+    
+    /*document.getElementsByTagName('p')[nr].innerHTML = "You will be a " + job + " in " + location + " and married to " + partnerFirst +" "+ partnerSurr + " with " + nrChildren + " kids.";
+    */
+/*    var para = document.createElement("p");
+    var node = document.createTextNode( "You will be a " + job + " in " + location + " and married to " + partnerFirst +" "+ partnerSurr + " with " + nrChildren + " kids.");
+    para.appendChild(node);
+    var element = document.getElementsByTagName("div")[0];
+    element.appendChild(para);
 
+};
+var nr = 1;
 var partnersFirst = ["Amanda", "Susan", "Maria", "Anna"];
 var partnersSurr = ["Jonsson", "Gustavsson", "Bäckman", "Andersson"];
 var locations = ["Lycksele", "L.A.", "Kroksjö", "Kiev"];
 var jobs = ["Engineer", "Cleaner", "Teacher", "Electrician"];
 
-var colors = ["blue", "grey", "",]
+var colors = ["blue", "grey", "cyan", "black", "pink"];
 var fortuneBtn = document.getElementsByTagName('button')[1];
 fortuneBtn.addEventListener('mousedown', function() {
-    document.getElementById("fortune").style.color = "magenta";
+    nr += 1;
+    document.getElementsByTagName("p")[nr].style.color = colors[Math.floor(Math.random() * 5)];
     tellFortune(Math.floor(Math.random() * 4), partnersFirst[Math.floor(Math.random() * partnersFirst.length)], partnersSurr[Math.floor(Math.random() * partnersSurr.length)],locations[Math.floor(Math.random() * locations.length)], jobs[Math.floor(Math.random() * jobs.length)]);
 });
+-------------------------- */
 /*
 function tellFortune(nrChildren, partnerFirst, partnerSurr, location, job) {
     document.getElementsByTagName('p')[newPara].innerHTML += "You will be a " + job + " in " + location + " and married to " + partnerFirst +" "+ partnerSurr + " with " + nrChildren + " kids.";
@@ -141,4 +152,25 @@ fortuneBtn.addEventListener('mousedown', function() {
     newParagraph();
     tellFortune(Math.floor(Math.random() * 4), partnersFirst[Math.floor(Math.random() * partnersFirst.length)], partnersSurr[Math.floor(Math.random() * partnersSurr.length)],locations[Math.floor(Math.random() * locations.length)], jobs[Math.floor(Math.random() * jobs.length)]);
 });
+
 */
+
+input = document.querySelector('input');
+pressed = document.getElementById('pressed');
+input.onkeypress = hangman;
+
+function hangman() {
+    var word = ["g", "o", "a", "t"];
+    var correctGuess = ""
+    guess = event.key;
+    pressed.textContent += guess;
+    for (var i = 0; i < word.length ; i++) {
+        if (guess == word[i]) {
+            correctGuess += guess;
+        }
+        else {
+            alert('nej');
+        }
+    }
+    document.getElementById('word').innerHTML += correctGuess;
+};
