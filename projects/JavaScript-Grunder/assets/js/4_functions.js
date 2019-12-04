@@ -156,6 +156,54 @@ fortuneBtn.addEventListener('mousedown', function() {
 */
 
 input = document.querySelector('input');
+pressed = document.getElementById('pressedKeys');
+input.onkeypress = hangman;
+var correctGuess = [" _ "," _ "," _ "," _ "];
+var word = ["g", "o", "a", "t"];
+var wins = 0;
+var lost = 0;
+var guessesLeft = 10;
+var correctLetters = 0;
+function hangman() {
+    document.getElementById('inputBox').value= '';
+    var guess = 0;
+    guess = event.key;
+    
+    pressed.textContent += guess;
+    guessesLeft -= 1;
+
+    for (var i = 0; i < word.length ; i++) {
+        if (guess == word[i] && guess !== correctGuess[i]) {
+            correctGuess[i] = guess;
+            correctLetters += 1;
+            if (correctLetters == word.length) {
+                wins += 1;
+                reset();
+            }
+        } else {
+            if (guessesLeft < 1) {
+            lost += 1;
+            reset();
+            }
+        }
+    refresh();
+}
+};
+function reset() {
+    guessesLeft = 10;
+    correctLetters = "";
+    correctGuess = [" _ "," _ "," _ "," _ "];
+    pressed.textContent = "";
+}
+function refresh() {
+    document.getElementById('word').innerHTML = correctGuess;
+    document.getElementById('wins').innerHTML = "Wins: "+ wins;
+    document.getElementById('lost').innerHTML = "Lost: "+ lost;
+    document.getElementById('guesses').innerHTML = "Guesses left: "+ guessesLeft;
+}
+
+/*
+input = document.querySelector('input');
 pressed = document.getElementById('pressed');
 input.onkeypress = hangman;
 
@@ -166,7 +214,14 @@ function hangman() {
     pressed.textContent += guess;
     for (var i = 0; i < word.length ; i++) {
         if (guess == word[i]) {
-            correctGuess += guess;
+            if (correctGuess.indexOf(guess) > -1) {
+                guess += correctGuess;
+                alert('jo');
+                
+            }
+            else {
+                alert('niet');
+            }
         }
         else {
             alert('nej');
@@ -174,3 +229,4 @@ function hangman() {
     }
     document.getElementById('word').innerHTML += correctGuess;
 };
+*/
