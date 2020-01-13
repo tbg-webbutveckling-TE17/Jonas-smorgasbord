@@ -168,7 +168,7 @@ function hangman() {
     document.getElementById('inputBox').value= '';
     var guess = 0;
     guess = event.key;
-    
+    var correctLetters = 0;
     pressed.textContent += guess;
     guessesLeft -= 1;
 
@@ -196,7 +196,7 @@ function reset() {
     pressed.textContent = "";
 }
 function refresh() {
-    document.getElementById('word').innerHTML = correctGuess;
+    document.getElementById('word').innerHTML = correctGuess.join();
     document.getElementById('wins').innerHTML = "Wins: "+ wins;
     document.getElementById('lost').innerHTML = "Lost: "+ lost;
     document.getElementById('guesses').innerHTML = "Guesses left: "+ guessesLeft;
