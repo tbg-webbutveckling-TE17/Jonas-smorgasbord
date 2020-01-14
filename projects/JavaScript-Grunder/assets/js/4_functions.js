@@ -164,11 +164,14 @@ var wins = 0;
 var lost = 0;
 var guessesLeft = 10;
 var correctLetters = 0;
+var balance = 0;
+var matchHistory = [];
+var displayMatchHistory = [];
+var multiplier = 1;
 function hangman() {
     document.getElementById('inputBox').value= '';
     var guess = 0;
     guess = event.key;
-    var correctLetters = 0;
     pressed.textContent += guess;
     guessesLeft -= 1;
 
@@ -178,11 +181,19 @@ function hangman() {
             correctLetters += 1;
             if (correctLetters == word.length) {
                 wins += 1;
+                streak(true);
+                flash("green");
+                displayMatchHistory += '✔️ ';
+                balance += 30 * multiplier;
                 reset();
             }
         } else {
             if (guessesLeft < 1) {
             lost += 1;
+            flash();
+            streak(false);
+            displayMatchHistory += '❌ ';
+            balance -= 30;
             reset();
             }
         }
@@ -191,16 +202,44 @@ function hangman() {
 };
 function reset() {
     guessesLeft = 10;
-    correctLetters = "";
+    correctLetters = 0;
     correctGuess = [" _ "," _ "," _ "," _ "];
     pressed.textContent = "";
 }
+function streak(bool) { // lägga till 
+    matchHistory.push(bool);
+    
+    if (bool == true && matchHistory[wins+lost-1] == matchHistory[wins+lost-2]) {
+        multiplier += 0.5;
+    } else {
+        multiplier = 1;
+    }
+}
+function flash() {
+    var ofs = 0;
+    var el = document.getElementById('flash');
+    var interval = window.setInterval(function(){
+     el.style.background = 'rgba(255,0,0,'+Math.abs(Math.sin(ofs))+')';
+    ofs += 0.01;
+    }, 10);
+    setTimeout(fuction()///////{   
+        clearInterval(),
+    }
+}
+    
+    //setTimeout(document.body.style.backgroundColor = "linear-gradient(to right, #0f9b0f, #000000)",2000);
+
 function refresh() {
-    document.getElementById('word').innerHTML = correctGuess.join();
+    document.getElementById('flash').style.backgroundColor = 'linear-gradient(to right, #0f9b0f, #000000)';
+    document.getElementById('balance').innerHTML = "Balance: " + balance + "$";
+    document.getElementById('streaks').innerHTML = "Match History: " + displayMatchHistory;
+    document.getElementById('word').innerHTML = correctGuess.join(' ');
     document.getElementById('wins').innerHTML = "Wins: "+ wins;
     document.getElementById('lost').innerHTML = "Lost: "+ lost;
     document.getElementById('guesses').innerHTML = "Guesses left: "+ guessesLeft;
+    
 }
+
 
 /*
 input = document.querySelector('input');
