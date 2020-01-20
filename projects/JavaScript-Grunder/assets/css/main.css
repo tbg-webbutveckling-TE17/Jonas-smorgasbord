@@ -1,7 +1,7 @@
 @charset 'utf-8';
 
 body {
-    background: linear-gradient(to right, #0f9b0f, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right, #00caf3, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     font-family: 'Roboto', sans-serif;
     padding: 10px;
 

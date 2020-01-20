@@ -51,9 +51,58 @@ var cars= ['a6', '940', 'mondeo','ferrari','landa','lada','citroen'];
 //for (var i = 0; i < cars.length; i++) {
 //    printToScreen.innerHTML += cars[i];
 //}
-
+printToScreen.innerHTML = cars.join(' <br/>')
 //printToScreen.innerHTML = cars.reverse().join(' <br/>');
 var countries = ['sweden','norway','finland','denmark','island'];
 countries.forEach(function(country) {
     printToScreen.innerHTML += country + ' ';
 });
+printToScreen.innerHTML = "";
+var planets = ["earth", "mars", "saturnus", "jupiter"];
+planets.forEach(function(planets) {
+    printToScreen.innerHTML += planets + ' - ';
+    
+});
+printToScreen.innerHTML = "";
+var number = [1, 32, 44 ,112 ,3 ,5 ,6,9,12];
+var color = ["red", "green", "blue", "yellow"];
+
+/*number.forEach(function(num) {
+    if(num % 3 === 0){
+        printToScreen.innerHTML += num + ' ';
+    }
+});
+*/
+for (var i = 0; number.length > i; i++) {
+    if (number[i] % 3 === 0) {
+        printToScreen.innerHTML += number[i] + ' ';
+    }
+};
+printToScreen.innerHTML = "";
+var k =[1,2,3,4,5,6,7];
+var ny = [];
+k.forEach(function(k){
+    ny.unshift(k);
+});
+printToScreen.innerHTML = ny;
+function isIdentical(arr1, arr2) {
+    if (JSON.stringify(arr1) == JSON.stringify(arr2)) {
+        printToScreen.innerHTML = true;
+    } else {
+        printToScreen.innerHTML = false;
+    }
+};
+isIdentical([2,3,4], [2,3,4]);
+var sum = 0;
+k.forEach(function(item) {
+    sum += item;
+})
+printToScreen.innerHTML = sum;
+
+var max = 0;
+number.forEach(function(item) {
+    if (item > max) {
+        max = item;
+    }
+})
+printToScreen.innerHTML = max;

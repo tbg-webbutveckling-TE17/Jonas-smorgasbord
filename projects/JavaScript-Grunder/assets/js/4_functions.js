@@ -3,7 +3,7 @@
     console.log("Blinka lilla stjärna där!");
     console.log("hur jag undrar var du är..");
 }
-
+/*
 // twinkleTwinkle();
 //deklarera funktionen med 2 parametrar
 function multiply(num1, num2) {
@@ -51,6 +51,7 @@ function isEven(x) {
 console.log
 (isEven(2));
 */
+/*
 function sing() {
     console.log('hej');
 }
@@ -154,7 +155,8 @@ fortuneBtn.addEventListener('mousedown', function() {
 });
 
 */
-
+/*
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
 input = document.querySelector('input');
 pressed = document.getElementById('pressedKeys');
 input.onkeypress = hangman;
@@ -168,6 +170,7 @@ var balance = 0;
 var matchHistory = [];
 var displayMatchHistory = [];
 var multiplier = 1;
+
 function hangman() {
     document.getElementById('inputBox').value= '';
     var guess = 0;
@@ -182,19 +185,19 @@ function hangman() {
             if (correctLetters == word.length) {
                 wins += 1;
                 streak(true);
-                flash("green");
+                flash('green');
                 displayMatchHistory += '✔️ ';
                 balance += 30 * multiplier;
                 reset();
             }
         } else {
             if (guessesLeft < 1) {
-            lost += 1;
-            flash();
-            streak(false);
-            displayMatchHistory += '❌ ';
-            balance -= 30;
-            reset();
+                lost += 1;
+                flash('red');
+                streak(false);
+                displayMatchHistory += '❌ ';
+                balance -= 30;
+                reset();
             }
         }
     refresh();
@@ -205,6 +208,7 @@ function reset() {
     correctLetters = 0;
     correctGuess = [" _ "," _ "," _ "," _ "];
     pressed.textContent = "";
+    message = "";
 }
 function streak(bool) { // lägga till 
     matchHistory.push(bool);
@@ -215,28 +219,21 @@ function streak(bool) { // lägga till
         multiplier = 1;
     }
 }
-function flash() {
-    var ofs = 0;
-    var el = document.getElementById('flash');
-    var interval = window.setInterval(function(){
-     el.style.background = 'rgba(255,0,0,'+Math.abs(Math.sin(ofs))+')';
-    ofs += 0.01;
-    }, 10);
-    setTimeout(fuction()///////{   
-        clearInterval(),
-    }
+function flash(flashColor) {
+    document.getElementById('flash').style.background = flashColor;
+    setTimeout(function(){
+        document.getElementById('flash').style.background= "linear-gradient(to right, #00caf3, #000000)";
+    }, 300);
 }
-    
-    //setTimeout(document.body.style.backgroundColor = "linear-gradient(to right, #0f9b0f, #000000)",2000);
 
 function refresh() {
-    document.getElementById('flash').style.backgroundColor = 'linear-gradient(to right, #0f9b0f, #000000)';
     document.getElementById('balance').innerHTML = "Balance: " + balance + "$";
     document.getElementById('streaks').innerHTML = "Match History: " + displayMatchHistory;
     document.getElementById('word').innerHTML = correctGuess.join(' ');
     document.getElementById('wins').innerHTML = "Wins: "+ wins;
     document.getElementById('lost').innerHTML = "Lost: "+ lost;
     document.getElementById('guesses').innerHTML = "Guesses left: "+ guessesLeft;
+    
     
 }
 
@@ -269,3 +266,78 @@ function hangman() {
     document.getElementById('word').innerHTML += correctGuess;
 };
 */
+
+input = document.querySelector('input');
+pressed = document.getElementById('pressedKeys');
+input.onkeypress = hangman;
+var correctGuess = [" _ "," _ "," _ "," _ "];
+var word = ["g", "o", "a", "t"];
+var wins = 0;
+var lost = 0;
+var guessesLeft = 10;
+var balance = 0;
+var matchHistory = [];
+var displayMatchHistory = [];
+
+function hangman() {
+    document.getElementById('inputBox').value= '';
+    var guess = event.key;
+    pressed.textContent += guess;
+    guessesLeft -= 1;
+    
+    if (word.indexOf(guess) !== -1) {
+        correctGuess[word.indexOf(guess)] = guess;
+        }
+        if (JSON.stringify(correctGuess) == JSON.stringify(word)) {
+            wins += 1;
+            streak(true);
+        } 
+    else {
+        if (guessesLeft < 1) {
+            lost +=1;
+            streak(false);
+        }
+    }
+    refresh();
+}
+
+function reset() {
+    guessesLeft = 10;
+    correctLetters = 0;
+    correctGuess = [" _ "," _ "," _ "," _ "];
+    pressed.textContent = "";
+}
+function streak(bool) { // lägga till 
+    matchHistory.push(bool);
+    if (bool == true) {
+        if (matchHistory[wins+lost-1] == matchHistory[wins+lost-2]) {
+            balance += 30 * 1.5;
+        }else {
+            balance += 30;
+        }
+        flash('green');
+        displayMatchHistory += '✔️ ';
+    } else {
+        displayMatchHistory += '❌ ';
+        balance -= 30;
+        flash('red');
+    }
+    reset();
+}
+function flash(flashColor) {
+    document.getElementById('flash').style.background = flashColor;
+    setTimeout(function(){
+        document.getElementById('flash').style.background= "linear-gradient(to right, #00caf3, #000000)";
+    }, 300);
+}
+
+function refresh() {
+    document.getElementById('balance').innerHTML = "Balance: " + balance + "$";
+    document.getElementById('streaks').innerHTML = "Match History: " + displayMatchHistory;
+    document.getElementById('word').innerHTML = correctGuess.join(' ');
+    document.getElementById('wins').innerHTML = "Wins: "+ wins;
+    document.getElementById('lost').innerHTML = "Lost: "+ lost;
+    document.getElementById('guesses').innerHTML = "Guesses left: "+ guessesLeft;
+    
+    
+}
