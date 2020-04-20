@@ -2,3 +2,51 @@
     display: flex;
     justify-content: space-between;
 }
+.listed {
+    border: black solid 1px;
+}
+.cart {
+    border: black solid 1px;
+    width: 40%;
+    
+}
+.cartItems {
+    display: flex;
+    flex-direction: column;
+}
+.cartItems p {
+    margin: 0;
+    display: none;
+}
+.cartItems p:nth-child(odd){
+    background: #2c3e50;
+}
+.right {
+    display: flex;
+    justify-content: flex-end;
+}
+
+button:nth-child(odd) {
+    padding-left: 6.5%; 
+    
+}
+i {
+    color: green;
+}
+.fa-info-circle {
+    color: black;
+}
+
+.contact-info-name {
+    display: flex;
+}
+.wrapper {
+    background-color: #34495e;
+}
+.cartItems p {
+    display: flex;
+    justify-content: space-between;
+}
+p {
+    color: #ced6e0;
+}
