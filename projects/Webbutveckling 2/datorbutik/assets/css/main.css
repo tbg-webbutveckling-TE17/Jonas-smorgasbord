@@ -6,24 +6,28 @@
     border: black solid 1px;
 }
 .cart {
+    width: 60%;
     border: black solid 1px;
-    width: 40%;
     
 }
 .cartItems {
     display: flex;
     flex-direction: column;
+    height: 70%;
+    
 }
 .cartItems p {
     margin: 0;
+    padding-left: 1%;
     display: none;
 }
 .cartItems p:nth-child(odd){
     background: #2c3e50;
 }
-.right {
+.order {
     display: flex;
     justify-content: flex-end;
+    width: 50%;
 }
 
 button:nth-child(odd) {
@@ -40,13 +44,28 @@ i {
 .contact-info-name {
     display: flex;
 }
-.wrapper {
+body {
     background-color: #34495e;
 }
 .cartItems p {
     display: flex;
     justify-content: space-between;
+    
 }
 p {
     color: #ced6e0;
+}
+.main {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.contact-info {
+    padding-left: 1%;
+}
+header {
+    margin: 0px;
+    padding: 0px;
+}
+.total {
 }

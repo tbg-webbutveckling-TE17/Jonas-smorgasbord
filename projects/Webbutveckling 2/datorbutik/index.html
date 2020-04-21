@@ -8,11 +8,12 @@
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 </head>
+<header>
+    <img src="assets/images/Untitled-1.png" alt="">
+</header>
 <body>
     <section class="wrapper">
-        <header>
-            <img src="https://via.placeholder.com/1260x125" alt="">
-        </header>
+        
         <section class="left">
             <section class="items">
                 <section class="listed">
@@ -60,7 +61,30 @@
 
             </section>
         </section>
-        <section class="right">
+        <section class="main">
+            <section class="contact-info">
+                <form action="">
+                    <label for="fname">Mottagare:</label><br>
+                    <input type="text" id="fname" name="fname" placeholder="Förnamn">
+                    <input type="text" id ="sname" name="sname" placeholder="Efternamn"> <br>
+                    <label for="phone">Telefonnummer:</label><br>
+                    <select name="phone" id="phone">
+                        <option value="+46">Sverige +46</option>
+                        <option value="+47">Norge +47</option>
+                        <option value="+358">Finland +358</option>
+                    </select>
+                    <input type="text" id=""> <br>
+                    <label for="country">Land</label> <br>
+                    <select name="country" id="country">
+                        <option value="swe">Sverige</option>
+                    </select> <br>
+                    <label for="postal-code">Postnummer:</label><br>
+                    <input type="text" name="postal-code" id="postal-code"> <br>
+                    <label for="adress">Mottagar adress:</label> <br>
+                    <input type="text" id="adress" name="adress">
+                </form>
+                </section>
+        <section class="order">
             <section class="cart">
             <section class="cartItems" id="cartItems">
                 <p id="motherboard"></p>
@@ -70,31 +94,16 @@
                 <p id="hdd"></p>
                 <p id="pcu"></p>
             </section>
-
-            <p id="total">0kr</p>
+            <br>
+            <p id="total">Att betala: 0kr</p>
             </section>
         </section>
-        <form action="">
-            <label for="fname">Mottagare:</label><br>
-            <input type="text" id="fname" name="fname" placeholder="Förnamn">
-            <input type="text" id ="sname" name="sname" placeholder="Efternamn"> <br>
-            <label for="phone">Telefonnummer:</label><br>
-            <select name="phone" id="phone">
-                <option value="+46">Sverige +46</option>
-                <option value="+47">Norge +47</option>
-                <option value="+358">Finland +358</option>
-            </select>
-            <input type="text" id=""> <br>
-            <label for="country">Land</label> <br>
-            <select name="country" id="country">
-                <option value="swe">Sverige</option>
-            </select> <br>
-            <label for="postal-code">Postnummer:</label><br>
-            <input type="text" name="postal-code" id="postal-code"> <br>
-            <label for="adress">Mottagar adress:</label> <br>
-            <input type="text" id="adress" name="adress">
-        </form>
+        
+        </section>
     </section>
+    <footer>
+
+    </footer>
 </body>
 <script src="assets/js/script.js"></script>
 </html>

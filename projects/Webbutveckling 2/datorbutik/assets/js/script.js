@@ -59,7 +59,7 @@ function addToCart(item) {
     document.getElementById(item.id).innerHTML = item.amount+"x "+item.name+"<span class='itemPrice'>"+item.price+"kr </span>";
     toPay += item.price;
     cart += item.name;
-    document.getElementById("total").innerHTML = toPay + "Kr";
+    document.getElementById("total").innerHTML = "Att betala:" + toPay + "Kr";
     document.getElementById(item.id).style.display = "flex";
 };
 function moreInfo(item) {
