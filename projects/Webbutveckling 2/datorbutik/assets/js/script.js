@@ -49,9 +49,6 @@ function addToCart(item) {
     var element = document.getElementById("cartItems");
     para.appendChild(node);
     element.appendChild(para);*/
-    var spacing = ".";
-    var selectedItem = item.name;
-    var repeats = 50 - selectedItem.length;
 
     
     item.amount += 1;
