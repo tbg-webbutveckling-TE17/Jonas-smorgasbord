@@ -4,7 +4,7 @@ body {
 .items {
     display: flex;
     justify-content: space-between;
-    
+    padding: 0.2%;
 }
 .listed {
     border: black solid 1px;
@@ -13,6 +13,9 @@ body {
     width: 60%;
     border: black solid 1px;
     
+}
+header img {
+    margin-left: -2px;
 }
 .cartItems {
     display: flex;
@@ -60,17 +63,17 @@ p {
     color: #ced6e0;
 }
 .main {
+    padding-top: 1%;
     display: flex;
     justify-content: space-between;
     width: 100%;
 }
 .contact-info {
     padding-left: 1%;
+    height: 100%;
+    width: 50%;
 }
-header {
-    margin: 0;
-    padding: 0;
-}
+
 p {
     padding-left: 4px;
 }
