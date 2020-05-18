@@ -10,8 +10,13 @@ body {
     border: black solid 1px;
 }
 .cart {
-    width: 60%;
+    width: 75%;
     border: black solid 1px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 6px;
+    background-color: grey;
     
 }
 header img {
@@ -20,21 +25,33 @@ header img {
 .cartItems {
     display: flex;
     flex-direction: column;
-    height: 70%;
+    height: 100%;
+
     
+}
+.total-order {
+    display: flex;
+    justify-content: flex-end;
+    
+}
+.total-order p{
+    
+   
 }
 .cartItems p {
     margin: 0;
-    padding-left: 1%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    /*padding-left: 1%;*/
     display: none;
 }
-.cartItems p:nth-child(odd){
-    background: #2c3e50;
-}
+
+
 .order {
     display: flex;
-    justify-content: flex-end;
-    width: 50%;
+    justify-content: center;
+    width: 100%;
+    height: 400px;
 }
 
 button:nth-child(odd) {
@@ -48,9 +65,9 @@ i {
     color: black;
 }
 
-.contact-info-name {
+/*.contact-info-name {
     display: flex;
-}
+}*/
 body {
     background-color: #34495e;
 }
@@ -65,18 +82,18 @@ p {
 .main {
     padding-top: 1%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     width: 100%;
 }
 .modal-content p {
     color: black;
 }
-.contact-info {
+/*.contact-info {
     padding-left: 1%;
     height: 100%;
     width: 50%;
 }
-
+*/
 p {
     padding-left: 4px;
 }
@@ -94,16 +111,16 @@ p {
     width: 100%; 
     height: 100%; 
     background-color: rgb(0,0,0); 
-    background-color: rgba(0,0,0,0.4); 
+    background-color: rgba(0,0,0,0.6); 
 }
 
 .modal-content {
-    background-color: #fefefe;
+    background-color: #dcdde1;
     margin: auto;
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
-  }
+}
   
 
 .close {
@@ -111,7 +128,7 @@ p {
     float: right;
     font-size: 28px;
     font-weight: bold;
-  }
+}
   
 .close:hover,
 .close:focus {
@@ -119,9 +136,42 @@ p {
     text-decoration: none;
     cursor: pointer;
 }
-.cartItems button {
+
+/*.cartItems button {
     display: none;
 }
-.cartItems:hover button{
+/*.cartItems:hover button{
     display: block;
 }
+*/
+.order {
+    height: ;
+}
+
+.orderBtn {
+	box-shadow:inset 0px 0px 10px -5px #caefab;
+	background:linear-gradient(to bottom, #77d42a 5%, #5cb811 100%);
+	background-color:#77d42a;
+	border-radius:6px;
+	border:1px solid #268a16;
+	display:inline-block;
+	cursor:pointer;
+	color:#306108;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:9px 11px;
+	text-decoration:none;
+    text-shadow:0px 1px 0px #aade7c;
+    height: 20px;
+}
+.orderBtn:hover {
+	background:linear-gradient(to bottom, #5cb811 5%, #77d42a 100%);
+	background-color:#5cb811;
+}
+.orderBtn:active {
+	position:relative;
+	top:1px;
+}
+
+        
