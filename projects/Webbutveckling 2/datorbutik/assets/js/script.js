@@ -48,25 +48,26 @@ var modal = document.getElementById("myModal");
 span.onclick = function() {
     modal.style.display = "none";
 }
+document.getElementById()
 function addToCart(item) {
     /*var para = document.createElement("a");
     var node = document.createTextNode(item.name+"......................."+item.price+"kr");
     var element = document.getElementById("cartItems");
     para.appendChild(node);
     element.appendChild(para);*/
-
-    
     amountAdd(item);
-    
-    document.getElementById(item.id).innerHTML =  item.amount+"x "+item.name+"<span class='itemPrice'>"+item.price*item.amount+"kr </span>";
-    //document.getElementById("total").innerHTML = "Att betala: " + toPay + "Kr";
     document.getElementById(item.id).style.display = "flex";
-    refreshCart();
 };
 function moreInfo(item) {
     modal.style.display = "block";
     document.getElementById("info-content").innerHTML = item.info;
     document.getElementById("modal-title").innerHTML = item.name;
+}
+function continueToOrder(){
+    modal.style.display = "block";
+    document.getElementById("info-content").innerHTML = ' <form action=""><label for="fname">Mottagare:</label><br><input type="text" id="fname" name="fname" placeholder="Förnamn"><input type="text" id ="sname" name="sname" placeholder="Efternamn"> <br><label for="phone">Telefonnummer:</label><br> <select name="phone" id="phone"><option value="+46">Sverige +46</option><option value="+47">Norge +47</option><option value="+358">Finland +358</option></select><input type="text" id=""> <br><label for="country">Land</label> <br><select name="country" id="country"><option value="swe">Sverige</option></select> <br><label for="postal-code">Postnummer:</label><br><input type="text" name="postal-code" id="postal-code"> <br><label for="adress">Mottagar adress:</label> <br><input type="text" id="adress" name="adress"></form>';
+
+    document.getElementById("modal-title").innerHTML = "Kontakt Information";
 }
 //window.onclick = function() {
 //    modal.style.display = "none";
